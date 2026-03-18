@@ -1,1 +1,1 @@
-This is the source code adapted from Jon Barron's public academic website: https://jonbarron.info/. 
+Yongkang Yang's personal website hosted in Github pages: https://yongkang-yang.github.io/Yongkang-Yang/ 
