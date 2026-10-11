@@ -3,7 +3,7 @@
   <h3>About</h3>
   <p class="blurb">{{ site.Params.blurb | markdownify }}</p>
 
-  <h3>Recent posts</h3>
+  <h3>Latest Posts</h3>
   <ul>
     {{ range first 6 $posts }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
   </ul>
@@ -13,9 +13,10 @@
     {{ range site.Taxonomies.categories.ByCount }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>{{ end }}
   </ul>
 
-  <h3>Archives</h3>
+  <h3>More</h3>
   <ul>
-    {{ range $posts.GroupByDate "January 2006" }}<li><a href="{{ "archives/" | relURL }}#{{ (index .Pages 0).Date.Format "2006-01" }}">{{ .Key }}</a> ({{ len .Pages }})</li>{{ end }}
+    <li><a href="{{ "archives/" | relURL }}">All posts by date</a></li>
+    <li><a href="{{ "tags/" | relURL }}">Tags</a></li>
+    <li><a href="{{ "index.xml" | relURL }}">Subscribe (RSS)</a></li>
   </ul>
-  <p><a href="{{ "archives/" | relURL }}">All posts</a> · <a href="{{ "tags/" | relURL }}">Tags</a></p>
 </aside>

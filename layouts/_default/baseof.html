@@ -19,15 +19,13 @@
 <body>
 <div id="wrapper">
   <header id="header">
-    {{ with site.Params.epigraph }}<div id="epigraph">{{ . | markdownify }}</div>{{ end }}
-    <p id="blog-title"><a href="{{ "" | relURL }}">{{ site.Title }}</a></p>
-    <p id="tagline">{{ site.Params.tagline }}</p>
+    <div id="branding">
+      <p id="blog-title"><a href="{{ "" | relURL }}">{{ site.Title }}</a></p>
+      <p id="tagline">{{ site.Params.tagline }}</p>
+    </div>
     <nav id="navigation">
-      <a class="feed" href="{{ "index.xml" | relURL }}">Subscribe to feed</a>
-      <span class="menu">
-        {{- $current := . }}
-        {{- range site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if or ($current.IsMenuCurrent "main" .) (and $current.IsHome (eq .URL "/")) }} class="current"{{ end }}>{{ .Name }}</a>{{ end }}
-      </span>
+      {{- $current := . }}
+      {{- range site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if or ($current.IsMenuCurrent "main" .) (and $current.IsHome (eq .URL "/")) }} class="current"{{ end }}>{{ .Name }}</a>{{ end }}
     </nav>
   </header>
   <div id="content">
@@ -37,6 +35,7 @@
     {{ partial "sidebar.html" . }}
   </div>
   <footer id="footer">
+    {{ with site.Params.epigraph }}<p id="epigraph">{{ . | markdownify }}</p>{{ end }}
     &copy; {{ now.Year }} {{ site.Params.author }} &nbsp;|&nbsp; <a href="mailto:ykyang.research@gmail.com">Email</a> &nbsp;|&nbsp; <a href="{{ "index.xml" | relURL }}">RSS</a>
   </footer>
 </div>
