@@ -17,6 +17,7 @@ I teach and supervise in organizational behavior and human resource management.
   <span class="teaching-date">2026</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Cross-Cultural Management Workshop</h3>
+    <p class="teaching-meta">Bachelor level</p>
   </div>
 </div>
 <div class="teaching-item">
@@ -37,18 +38,21 @@ I teach and supervise in organizational behavior and human resource management.
   <span class="teaching-date">2025</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Human Resource Management Workshop</h3>
+    <p class="teaching-meta">Bachelor level</p>
   </div>
 </div>
 <div class="teaching-item">
   <span class="teaching-date">2025</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Organizational Behavior Workshop</h3>
+    <p class="teaching-meta">Bachelor level</p>
   </div>
 </div>
 <div class="teaching-item">
   <span class="teaching-date">Fall 2024</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Organizational Behavior Workshop</h3>
+    <p class="teaching-meta">Bachelor level</p>
   </div>
 </div>
 <div class="teaching-item">
