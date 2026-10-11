@@ -112,7 +112,7 @@ img.profile-photo { float: right; width: 150px; height: 150px; object-fit: cover
   blockquote { margin: 16px 0; }
 }
 
-/* Comments (giscus), headed like the sidebar sections */
+/* Comments (Waline), headed like the sidebar sections */
 #comments { margin-top: 36px; }
 #comments h3 {
   font-size: 11px;
@@ -127,3 +127,39 @@ img.profile-photo { float: right; width: 150px; height: 150px; object-fit: cover
 
 /* Display math scrolls sideways on narrow screens instead of overflowing */
 .katex-display { overflow-x: auto; overflow-y: hidden; }
+
+/* Waline in the site palette: Lato, blue accents, square corners, no avatars or badges */
+#waline {
+  --waline-font-size: 14px;
+  --waline-white: #fff;
+  --waline-light-grey: #999;
+  --waline-dark-grey: #555;
+  --waline-theme-color: #1772d0;
+  --waline-active-color: #f09228;
+  --waline-color: #000;
+  --waline-bg-color: #fff;
+  --waline-bg-color-light: #fafafa;
+  --waline-bg-color-hover: #f5f5f5;
+  --waline-border-color: #ccc;
+  --waline-disable-bg-color: #f5f5f5;
+  --waline-disable-color: #bbb;
+  --waline-code-bg-color: #f5f5f5;
+  --waline-bq-color: #f5f5f5;
+  --waline-avatar-size: 0;
+  --waline-m-avatar-size: 0;
+  --waline-border: 1px solid var(--waline-border-color);
+  --waline-avatar-radius: 0;
+  --waline-box-shadow: none;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+#waline .wl-panel { border-radius: 0; margin: 0 0 1em; }
+#waline .wl-btn { border-radius: 0; }
+#waline .wl-user-avatar, #waline .wl-user, #waline .wl-badge, #waline .wl-power, #waline .wl-meta { display: none; }
+#waline .wl-card-item { padding: 0.5em 0; }
+#waline .wl-card { border-bottom: 1px solid #e5e5e5; }
+#waline .wl-nick { color: #000; font-weight: 700; }
+#waline .wl-editor, #waline input, #waline textarea { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 14px; }
+#waline .wl-like, #waline .wl-rss, #waline .wl-action:not(.wl-reply) { display: none; }
+#waline .wl-count { font-size: 14px; font-weight: 700; }
+#waline .wl-btn.primary { background: #1772d0; border-color: #1772d0; color: #fff; }
+#waline .wl-btn.primary:hover { background: #f09228; border-color: #f09228; }
