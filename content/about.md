@@ -1,6 +1,10 @@
 ---
 title: "About"
 url: "/about/"
+ShowReadingTime: false
+ShowPostNavLinks: false
+hideMeta: true
+comments: false
 ---
 
 <img src="../images/YongkangYang.jpg" alt="Yongkang Yang" class="profile-photo">
@@ -35,3 +39,6 @@ More: [Research](../research/) · [Teaching](../teaching/) · [Blog](../)
 
 This site collects my notes on research, methods, and tools. If you find a mistake or anything outdated, please email me at [ykyang.research@gmail.com](mailto:ykyang.research@gmail.com).
 
+> 莫见乎隐，莫显乎微，故君子慎其独也。 ——《礼记·中庸》
+>
+> "There is nothing more visible than what is secret, and nothing more manifest than what is minute. Therefore the superior man is watchful over himself, when he is alone."

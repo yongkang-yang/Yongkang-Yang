@@ -1,4 +1,0 @@
-<p class="post-footer">
-{{- with .GetTerms "categories" }}Posted in {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end }}{{ end }}
-{{- with .GetTerms "tags" }} &nbsp;|&nbsp; Tagged {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end }}{{ end }}
-{{- if site.Params.waline }} &nbsp;|&nbsp; <a href="{{ .RelPermalink }}#comments">Leave a comment</a>{{ end }}</p>
