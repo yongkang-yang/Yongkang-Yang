@@ -1,0 +1,5 @@
+{{- $year := .Get "year" -}}
+<div class="research-entry">
+  <div class="research-year">{{ $year }}</div>
+  <div class="research-entry-content">{{ .Inner | markdownify }}</div>
+</div>
