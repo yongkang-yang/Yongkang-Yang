@@ -9,7 +9,7 @@ comments: false
 
 My research focuses on team membership change, multicultural teams, team diversity, and information elaboration. I use longitudinal and social network approaches to study how teams adapt and perform in dynamic contexts, and I also study how artificial intelligence shapes people, teams, and organizations.
 
-## Publications
+<h2 class="research-section">Publications</h2>
 
 **With Whom You Elaborate Matters: How Learning Orientation Impacts Cross-Culture and Same-Culture Information Elaboration in Culturally Diverse Teams**  
 **Yongkang Yang\***, [Daan van Knippenberg](https://business.rice.edu/person/daan-van-knippenberg), [Anne Nederveen Pieterse](https://www.rsm.nl/nl/people/anne-nederveen-pieterse/), [Jia Li](https://orcid.org/0000-0002-1107-0835)  
@@ -29,14 +29,14 @@ My research focuses on team membership change, multicultural teams, team diversi
 
 \* Corresponding author
 
-## Papers Under Review
+<h2 class="research-section">Papers Under Review</h2>
 
 1. **Yang, Yongkang**, Duan, Minhui, Yuan, Shuai\*, & Xing, Lu. *Understanding and Mitigating Biases in the Generative Artificial Intelligence Systems in Human Resource Management Tasks.* **Journal of Managerial Psychology** (2nd R&R).
 2. Li, Tongmao, **Yang, Yongkang\***, & Tomaino, Geoff. *When AI Acts, Does the Firm Act?* **Journal of Marketing Research** (Under review).
 
 \* Corresponding author
 
-## Conference Presentations
+<h2 class="research-section">Conference Presentations</h2>
 
 1. Li, T., **Yang, Y.\***, & Tomaino, G. (2026). When AI Acts, Does the Firm Act? Poster presented at the *[2026 Association for Consumer Research (ACR) Conference, Chicago, IL](https://acrwebsite.org/events/acr26/)*.
 2. **Yang, Y.**, van Knippenberg, D., Nederveen Pieterse, A., & Li, J. (2026). [Cultural Diversity as a Buffer Against Membership Change: The Role of Transactive Memory](https://journals.aom.org/doi/10.5465/AMPROC.2026.11866abstract). Paper presented at the *[86th Academy of Management Annual Meeting, Philadelphia, PA](https://www.aom.org/event/aom-2026-annual-meeting/)*.
