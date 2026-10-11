@@ -56,3 +56,7 @@
 }
 #waline .wl-user-avatar, #waline .wl-user, #waline .wl-badge, #waline .wl-power,
 #waline .wl-meta, #waline .wl-like, #waline .wl-rss { display: none; }
+
+/* Blog list: tag and comment links sit above the card's full-size link */
+.entry-footer a { position: relative; z-index: 1; color: var(--secondary); }
+.entry-footer a:hover { color: var(--primary); text-decoration: underline; }
