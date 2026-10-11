@@ -19,7 +19,7 @@ So how can we make AI work better for us? Inspired partly by my experience with 
 
 ## A small, shared workspace
 
-Research lasts months or years. A chat window does not reliably carry the project's history from one task to the next. Instead, I keep a few plain Markdown files at the project root:
+Research lasts months or years. A chat window does not reliably carry the project's history from one task to the next. In my research project template, the `README.md` serves as a map: it explains the purpose of each folder and shows a directory tree that can be updated automatically. Here is a simplified example:
 
 ```text
 research-project/
@@ -28,29 +28,34 @@ research-project/
 ├── PROJECT.md
 ├── MEASURES.md
 ├── RESULTS.md
+├── compliance/
 ├── literature/
-├── data/
-├── scripts/
-├── results/
+├── studies/
+│   ├── study-01/
+│   └── study-02/
 ├── writing/
+├── submission/
+├── meetings/
+├── presentation/
 ├── logs/
+├── scripts/
 └── skills/
 ```
 
-Each root file has one job:
+A few Markdown files at the root give the AI the context it needs:
 
-- **`README.md`** maps the folders and tells people where to find files. A small script can update its directory tree when files are added or moved.
-- **`AGENTS.md`** tells the AI what to read first, where to save work, how to name files, and when to ask for approval.
-- **`PROJECT.md`** records the research question, current progress, key decisions, and next steps.
-- **`MEASURES.md`** records variable definitions, measures, sources, and changes.
-- **`RESULTS.md`** summarizes checked analyses, findings, and remaining uncertainties.
+- **`README.md`** maps the folders and tells people and AI where to find files.
+- **`AGENTS.md`** explains what the AI should read first, where to save work, and when to ask for approval.
+- **`PROJECT.md`** records the research question, current progress, decisions, and next steps.
+- **`MEASURES.md`** records variable definitions, measures, and their sources.
+- **`RESULTS.md`** summarizes verified analyses and remaining uncertainties.
 
-The folders keep source material, scripts, outputs, drafts, and dated work logs separate. I keep project-specific instructions in `skills/` only when a task needs them. There is no need to install every available AI tool or extension.
+The other folders keep research materials, manuscripts, meeting notes, and dated logs in predictable places. Project-specific scripts and skills can stay in the project without having to explain their details in every conversation.
 
-## How I work with AI
+## A concrete example: proofreading the results
 
-At the start of a task, the AI reads `AGENTS.md`, `PROJECT.md`, and the latest entry in `logs/`. If I ask it to revisit an analysis, it can check `MEASURES.md`, put code in `scripts/`, and save outputs in `results/`. After I verify the output, we update `RESULTS.md` and record what changed in the log. When the folder structure changes, a small local script refreshes the directory map in `README.md`.
+Suppose I ask AI to check a manuscript after an analysis has changed. Instead of searching through unfamiliar files, it can follow `README.md` to the relevant study, read the variable definitions in `MEASURES.md`, and compare the manuscript's claims and tables with the checked results in `RESULTS.md`. It can flag differences and suggest edits; I decide which corrections are valid. We then record the accepted changes in `logs/`.
 
-This makes the process easier to inspect and repeat. It also makes it easier to switch between tools without losing the project's rules.
+If the project gains a new folder, a small script can refresh the directory map in `README.md`. The next AI session starts with an up-to-date map rather than another long explanation. The same structure also works across different AI tools.
 
 **The goal is not to let AI make research decisions on its own.** The researcher remains responsible for checking references, methods, results, confidential data, and disclosure requirements. AI can help with the work; a clear workspace helps us keep control of it.
