@@ -1,0 +1,60 @@
+/* Same look as the original homepage: Lato, 14px, blue links, one 800px column. */
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  background: #fff;
+  color: #222;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+a { color: #1772d0; text-decoration: none; }
+a:hover, a:focus { color: #f09228; }
+
+.site-header { padding: 20px 0 10px; text-align: center; border-bottom: 1px solid #ddd; margin-bottom: 20px; }
+.name { margin: 0 0 6px; font-size: 32px; }
+.name a { color: #222; }
+nav a.current { color: #222; font-weight: 700; }
+
+h2 { font-size: 22px; font-weight: normal; margin: 28px 0 6px; }
+h3 { font-size: 17px; margin: 22px 0 6px; }
+h4 { font-size: 15px; margin: 18px 0 6px; }
+.post > h2:first-child, main > h2:first-child { margin-top: 10px; }
+
+.intro { color: #444; }
+.post { padding-bottom: 20px; border-bottom: 1px solid #eee; margin-bottom: 10px; }
+.post:last-of-type { border-bottom: 0; }
+.meta, .date { color: #777; font-size: 13px; }
+.meta { margin: 0 0 12px; }
+
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin-bottom: 6px; }
+.pager { margin-top: 24px; }
+
+img, video { max-width: 100%; height: auto; }
+blockquote { margin: 1em 0; padding-left: 14px; border-left: 3px solid #ddd; color: #555; }
+code { font-size: 13px; background: #f5f5f5; padding: 1px 4px; }
+pre { font-size: 13px; padding: 10px; overflow-x: auto; border: 1px solid #eee; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 4px 8px; }
+hr { border: 0; border-top: 1px solid #ddd; }
+
+footer { margin-top: 40px; padding-top: 10px; border-top: 1px solid #ddd; text-align: center; color: #777; font-size: 12px; }
+
+/* About page portrait */
+img.profile-photo { float: right; width: 160px; height: 160px; object-fit: cover; border-radius: 50%; margin: 0 0 10px 20px; }
+
+/* Teaching entries: thumbnail beside description */
+.teaching-item { display: flex; gap: 20px; align-items: center; margin-bottom: 20px; }
+.teaching-item img, .teaching-item video { flex: 0 0 150px; width: 150px; height: 100px; object-fit: cover; }
+.teaching-item p { margin: 2px 0; }
+
+.publication-note { color: #555; font-size: 13px; }
+
+@media (max-width: 640px) {
+  img.profile-photo { float: none; display: block; margin: 0 auto 10px; }
+  .teaching-item { flex-direction: column; align-items: flex-start; }
+}

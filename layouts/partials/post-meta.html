@@ -1,0 +1,3 @@
+<p class="meta">{{ .Date.Format "January 2, 2006" }}
+{{- with .GetTerms "categories" }} &nbsp;·&nbsp; {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end }}{{ end }}
+{{- with .GetTerms "tags" }} &nbsp;·&nbsp; Tags: {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end }}{{ end }}</p>

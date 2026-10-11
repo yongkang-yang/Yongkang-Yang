@@ -1,53 +1,23 @@
 baseURL = 'https://yongkang-yang.github.io/Yongkang-Yang/'
 languageCode = 'en'
 title = 'Yongkang Yang'
-theme = 'PaperMod'
 enableRobotsTXT = true
-summaryLength = 120
 
 [pagination]
-  pagerSize = 10
+  pagerSize = 5
 
 [services.googleAnalytics]
   ID = 'G-YC066ZFZ27'
 
+[services.rss]
+  limit = 20
+
 [params]
   author = 'Yongkang Yang'
   description = "Yongkang Yang is a PhD candidate in Organizational Behavior at Rotterdam School of Management, Erasmus University Rotterdam. Notes on research, methods, and tools."
-  defaultTheme = 'auto'
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = false
-  ShowCodeCopyButtons = true
-  ShowFullTextinRSS = true
-
-  [params.homeInfoParams]
-    Title = "Yongkang Yang"
-    Content = """PhD candidate in Organizational Behavior at [Rotterdam School of Management](https://www.rsm.nl/), Erasmus University Rotterdam. \
+  intro = """PhD candidate in Organizational Behavior at [Rotterdam School of Management](https://www.rsm.nl/), Erasmus University Rotterdam. \
 I study team membership change, multicultural teams, team diversity, and how AI shapes people and organizations. \
-This site collects my notes on research, methods, and tools. See [About](about/), [Research](research/), and [Teaching](teaching/)."""
-
-  [[params.socialIcons]]
-    name = "email"
-    url = "mailto:ykyang.research@gmail.com"
-  [[params.socialIcons]]
-    name = "googlescholar"
-    url = "https://scholar.google.com/citations?user=g5nED5gAAAAJ"
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/yongkang-yang"
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://www.linkedin.com/in/yongkang-yang-0530a1205/"
-  [[params.socialIcons]]
-    name = "rss"
-    url = "index.xml"
-
-  [params.assets]
-    favicon = "images/favicon/favicon.ico"
-    favicon16x16 = "images/favicon/favicon-16x16.png"
-    favicon32x32 = "images/favicon/favicon-32x32.png"
-    apple_touch_icon = "images/favicon/apple-touch-icon.png"
+Notes on research, methods, and tools below; see [About](about/), [Research](research/), and [Teaching](teaching/) for the rest."""
 
 [menu]
   [[menu.main]]
@@ -74,15 +44,13 @@ This site collects my notes on research, methods, and tools. See [About](about/)
     name = "Tags"
     url = "/tags/"
     weight = 60
-  [[menu.main]]
-    name = "Search"
-    url = "/search/"
-    weight = 70
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    style = 'github'

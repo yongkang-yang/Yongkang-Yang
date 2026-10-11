@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="post">
+  <h2>{{ .Title }}</h2>
+  {{ if eq .Section "posts" }}{{ partial "post-meta.html" . }}{{ end }}
+  {{ .Content }}
+  {{ if eq .Section "posts" }}
+  <p class="pager">
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
+    {{ if and .NextInSection .PrevInSection }} &nbsp;/&nbsp; {{ end }}
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
+  </p>
+  {{ end }}
+</article>
+{{ end }}

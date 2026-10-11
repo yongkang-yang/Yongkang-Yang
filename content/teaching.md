@@ -1,9 +1,6 @@
 ---
 title: "Teaching"
 url: "/teaching/"
-ShowReadingTime: false
-ShowPostNavLinks: false
-hideMeta: true
 ---
 
 I teach and supervise in organizational behavior and human resource management at Rotterdam School of Management, Erasmus University Rotterdam.

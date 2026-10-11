@@ -1,9 +1,6 @@
 ---
 title: "About"
 url: "/about/"
-ShowReadingTime: false
-ShowPostNavLinks: false
-hideMeta: true
 ---
 
 <img src="../images/YongkangYang.jpg" alt="Yongkang Yang" class="profile-photo">
