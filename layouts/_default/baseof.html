@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+  <meta name="author" content="{{ site.Params.author }}">
+  <meta name="description" content="{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="{{ "images/favicon/favicon.ico" | relURL }}">
+  <link rel="apple-touch-icon" href="{{ "images/favicon/apple-touch-icon.png" | relURL }}">
+  {{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+  {{ if hugo.IsProduction }}{{ template "_internal/google_analytics.html" . }}{{ end }}
+</head>
+<body>
+<div id="wrapper">
+  <header id="header">
+    {{ with site.Params.epigraph }}<div id="epigraph">{{ . | markdownify }}</div>{{ end }}
+    <p id="blog-title"><a href="{{ "" | relURL }}">{{ site.Title }}</a></p>
+    <p id="tagline">{{ site.Params.tagline }}</p>
+    <nav id="navigation">
+      <a class="feed" href="{{ "index.xml" | relURL }}">Subscribe to feed</a>
+      <span class="menu">
+        {{- $current := . }}
+        {{- range site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if or ($current.IsMenuCurrent "main" .) (and $current.IsHome (eq .URL "/")) }} class="current"{{ end }}>{{ .Name }}</a>{{ end }}
+      </span>
+    </nav>
+  </header>
+  <div id="content">
+    <main id="primary">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "sidebar.html" . }}
+  </div>
+  <footer id="footer">
+    &copy; {{ now.Year }} {{ site.Params.author }} &nbsp;|&nbsp; <a href="mailto:ykyang.research@gmail.com">Email</a> &nbsp;|&nbsp; <a href="{{ "index.xml" | relURL }}">RSS</a>
+  </footer>
+</div>
+</body>
+</html>

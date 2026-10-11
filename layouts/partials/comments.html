@@ -1,0 +1,27 @@
+{{- with site.Params.waline }}
+<section id="comments">
+  <h3>Comments</h3>
+  <div id="waline"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@3.16.0/dist/waline.css">
+  <script type="module">
+    import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3.16.0/dist/waline.js';
+    init({
+      el: '#waline',
+      serverURL: '{{ .serverURL }}',
+      path: location.pathname,
+      lang: 'en',
+      dark: false,
+      login: 'disable',
+      meta: ['nick', 'mail', 'link'],
+      requiredMeta: ['nick'],
+      reaction: false,
+      emoji: false,
+      search: false,
+      imageUploader: false,
+      pageview: false,
+      comment: false,
+      locale: { placeholder: 'Leave a comment. Name is required; email (never shown) and website are optional. Markdown and LaTeX ($...$) work.' },
+    });
+  </script>
+</section>
+{{- end }}

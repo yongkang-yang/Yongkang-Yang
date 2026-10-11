@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ $pages := where site.RegularPages "Section" "posts" }}
+{{ $pager := .Paginate $pages }}
+{{ range $pager.Pages }}
+<article class="entry">
+  <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  {{ partial "post-meta.html" . }}
+  <div class="post-content">
+    {{ .Summary }}
+    {{ if .Truncated }}<p><a href="{{ .RelPermalink }}">Read the rest of this entry &raquo;</a></p>{{ end }}
+  </div>
+  {{ partial "math-css.html" . }}
+</article>
+{{ end }}
+<p class="pager">
+  {{ with $pager.Next }}<a href="{{ .URL }}">&laquo; Older entries</a>{{ end }}
+  {{ if and $pager.HasPrev $pager.HasNext }} &nbsp;|&nbsp; {{ end }}
+  {{ with $pager.Prev }}<a href="{{ .URL }}">Newer entries &raquo;</a>{{ end }}
+</p>
+{{ end }}
