@@ -11,7 +11,6 @@ tags:
   - running
 categories:
   - Technology
-weight: 1
 ---
 
 If you were to ask me about the most impactful shift in my digital life this past week, I would probably just point you toward this screen. It started as a project I had bookmarked as "just another local AI assistant"—Openclaw (originally Clawdbot). But within a few short days, it has transformed from a simple program in my terminal into a full-fledged "digital partner" coded under the alias **Ernest Thornhill**.
