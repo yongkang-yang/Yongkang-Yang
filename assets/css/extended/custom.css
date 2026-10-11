@@ -97,3 +97,58 @@
 .entry-tags { margin-top: 4px; font-size: 12px; line-height: 1.6; color: var(--secondary); }
 .entry-tags a { position: relative; z-index: 1; color: var(--secondary); }
 .entry-tags a:hover { color: var(--primary); text-decoration: underline; }
+
+/* Research: clean, compact academic bibliography */
+.post-content .research-section-heading {
+  margin: 2rem 0 0.45rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.post-content .research-entry {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  column-gap: 1.2rem;
+  align-items: start;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.post-content .research-entry:last-of-type {
+  border-bottom: none;
+}
+.post-content .research-year {
+  padding-top: 0.08rem;
+  color: var(--secondary);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+.post-content .research-entry-content {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.post-content .research-entry-content p {
+  margin: 0;
+  line-height: 1.55;
+}
+.post-content .research-entry-content p + p {
+  margin-top: 0.22rem;
+}
+.post-content .research-entry-content p:first-child {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.post-content .research-entry-content p:nth-child(2) {
+  font-size: 0.89rem;
+}
+.post-content .research-entry-content p:nth-child(3) {
+  font-size: 0.87rem;
+  color: var(--secondary);
+}
+@media (max-width: 600px) {
+  .post-content .research-entry {
+    grid-template-columns: 1fr;
+    row-gap: 0.2rem;
+    padding: 0.8rem 0;
+  }
+}
