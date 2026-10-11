@@ -1,3 +1,1 @@
-<p class="post-metadata">{{ .Date.Format "2 January, 2006" }}
-{{- with .GetTerms "categories" }} in {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end }}{{ end }}
-{{- with .GetTerms "tags" }} | Tags: {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end }}{{ end }}</p>
+<p class="post-metadata">Posted on <a href="{{ .RelPermalink }}">{{ .Date.Format "January 2, 2006" }}</a> by {{ site.Params.author }}</p>

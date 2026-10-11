@@ -1,86 +1,73 @@
 /*
- * Layout follows the Tarski WordPress theme as used on Terence Tao's blog:
- * a header with title, tagline and a ruled menu bar, then a narrow sidebar
- * on the left and the posts on the right. Type and link colours follow the
- * original homepage: Lato, #1772d0 links, orange on hover.
+ * Layout follows the classic WordPress blog look (Twenty Eleven, as on
+ * blog.archive.org): title and tagline on one line, a black menu bar, the
+ * posts in a wide left column and a narrow sidebar on the right. Type and
+ * link colours follow the original homepage: Lato, #1772d0 links.
  */
 html, body { margin: 0; padding: 0; }
 body {
   background: #fff;
-  color: #000;
+  color: #222;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 a { color: #1772d0; text-decoration: none; }
-a:hover, a:focus { color: #f09228; }
+a:hover, a:focus { color: #f09228; text-decoration: underline; }
 
-#wrapper { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+#wrapper { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 
-/* Header */
-#header { padding-top: 24px; }
-#epigraph { text-align: right; color: #555; font-size: 15px; margin-bottom: 18px; }
-#epigraph span { white-space: nowrap; }
-#blog-title { font-size: 32px; line-height: 1.2; margin: 0; }
-#blog-title a { color: #000; }
-#tagline { font-size: 17px; font-style: italic; color: #999; margin: 4px 0 10px; }
-#navigation {
-  display: flex;
-  align-items: baseline;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 7px 0;
+/* Header: title left, tagline right, black menu bar */
+#header { padding-top: 28px; }
+#branding { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; padding-bottom: 18px; }
+#blog-title { font-size: 30px; font-weight: 700; line-height: 1.2; margin: 0; }
+#blog-title a { color: #111; text-decoration: none; }
+#tagline { font-size: 16px; font-style: italic; color: #777; margin: 0; }
+#navigation { background: #111; padding: 0 8px; }
+#navigation a {
+  display: inline-block;
+  color: #ccc;
+  padding: 11px 14px;
+  font-size: 15px;
+  text-decoration: none;
 }
-#navigation .feed { flex: 0 0 220px; font-size: 12px; }
-#navigation .menu a { margin-right: 18px; }
-#navigation .menu a.current { color: #000; }
+#navigation a:hover, #navigation a:focus { color: #fff; background: #333; }
+#navigation a.current { color: #fff; font-weight: 700; }
 
-/* Two columns: sidebar left, posts right */
-#content { display: flex; gap: 40px; padding: 28px 0 10px; }
-#primary { flex: 1; min-width: 0; order: 2; }
-#secondary { flex: 0 0 200px; order: 1; font-size: 13px; }
+/* Two columns: posts left, sidebar right */
+#content { display: flex; gap: 56px; padding: 36px 0 10px; }
+#primary { flex: 1; min-width: 0; }
+#secondary { flex: 0 0 230px; font-size: 14px; }
 
 /* Sidebar */
-#secondary h3 {
-  font-size: 11px;
-  font-weight: normal;
-  color: #777;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 5px;
-  margin: 0 0 10px;
-}
-#secondary ul { list-style: none; margin: 0 0 24px; padding: 0; }
-#secondary li { margin: 0 0 7px; line-height: 1.35; }
-#secondary .blurb { margin: 0 0 24px; line-height: 1.45; }
+#secondary h3 { font-size: 15px; font-weight: 700; color: #111; margin: 0 0 10px; }
+#secondary ul { list-style: square; margin: 0 0 28px; padding-left: 18px; }
+#secondary li { margin: 0 0 8px; line-height: 1.4; color: #999; }
+#secondary .blurb { margin: 0 0 28px; line-height: 1.5; }
 
 /* Posts */
-.post-title {
-  font-size: 26px;
-  font-weight: normal;
-  line-height: 1.2;
-  margin: 0;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #ccc;
-}
-.post-title a { color: #1772d0; }
-.post-metadata { font-size: 11px; color: #999; margin: 4px 0 14px; }
-.entry { margin-bottom: 44px; }
-.post-content p, .post-content li { line-height: 1.55; }
-.post-content h2 { font-size: 20px; font-weight: normal; margin: 26px 0 8px; }
-.post-content h3 { font-size: 16px; margin: 22px 0 6px; }
-.post-content h4 { font-size: 14px; margin: 18px 0 6px; }
-.pager { font-size: 13px; text-align: center; margin: 10px 0 30px; }
+.post-title { font-size: 28px; font-weight: 700; line-height: 1.25; margin: 0; }
+.post-title a { color: #111; }
+.post-title a:hover { color: #1772d0; text-decoration: none; }
+.post-metadata { font-size: 14px; color: #777; margin: 6px 0 18px; }
+.post-metadata a { color: #777; text-decoration: underline; }
+.post-footer { font-size: 14px; color: #777; margin: 18px 0 0; }
+.entry { margin-bottom: 36px; padding-bottom: 32px; border-bottom: 1px solid #e5e5e5; }
+#primary > .entry:last-of-type { border-bottom: 0; }
+.post-content p, .post-content li { line-height: 1.7; }
+.post-content h2 { font-size: 22px; margin: 30px 0 10px; }
+.post-content h3 { font-size: 18px; margin: 24px 0 8px; }
+.post-content h4 { font-size: 16px; margin: 20px 0 6px; }
+.pager { font-size: 14px; text-align: center; margin: 10px 0 30px; }
 
-/* Tao's custom CSS: boxed quotations */
+/* Boxed quotations, as on Terence Tao's blog */
 blockquote { border: 1px solid #000; margin: 20px 25px; padding: 5px 12px; }
 blockquote p { margin: 6px 0; }
 
 img, video { max-width: 100%; height: auto; }
-code { font-size: 13px; background: #f5f5f5; padding: 1px 4px; }
-pre { font-size: 13px; padding: 10px; overflow-x: auto; border: 1px solid #eee; }
+code { font-size: 14px; background: #f5f5f5; padding: 1px 4px; }
+pre { font-size: 14px; padding: 10px; overflow-x: auto; border: 1px solid #eee; }
 pre code { background: none; padding: 0; }
 table { border-collapse: collapse; }
 th, td { border: 1px solid #ddd; padding: 4px 8px; }
@@ -88,9 +75,11 @@ hr { border: 0; border-top: 1px solid #ddd; }
 
 .post-list { list-style: none; padding: 0; }
 .post-list li { margin-bottom: 6px; }
-.date { color: #999; font-size: 12px; }
+.date { color: #999; font-size: 14px; }
 
-#footer { border-top: 3px double #ccc; margin-top: 10px; padding: 12px 0 30px; color: #999; font-size: 12px; }
+#footer { border-top: 1px solid #e5e5e5; margin-top: 10px; padding: 16px 0 36px; color: #999; font-size: 13px; }
+#epigraph { margin: 0 0 6px; color: #777; }
+#epigraph span { white-space: nowrap; }
 
 /* About page portrait */
 img.profile-photo { float: right; width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin: 0 0 10px 20px; }
@@ -101,12 +90,14 @@ img.profile-photo { float: right; width: 150px; height: 150px; object-fit: cover
 .teaching-item p { margin: 2px 0; }
 
 /* Phones: one column, sidebar below the posts */
-@media (max-width: 700px) {
-  #navigation { flex-direction: column; }
-  #navigation .feed { flex: none; margin-bottom: 4px; }
-  #navigation .menu a { display: inline-block; margin: 2px 14px 2px 0; }
-  #content { flex-direction: column; }
-  #secondary { flex: none; order: 3; }
+@media (max-width: 760px) {
+  #wrapper { padding: 0 16px; }
+  #branding { flex-direction: column; gap: 4px; }
+  #navigation { padding: 0; }
+  #navigation a { padding: 9px 8px; font-size: 14px; }
+  #content { flex-direction: column; gap: 10px; }
+  #secondary { flex: none; border-top: 1px solid #e5e5e5; padding-top: 24px; }
+  .post-title { font-size: 24px; }
   img.profile-photo { float: none; display: block; margin: 0 auto 10px; }
   .teaching-item { flex-direction: column; align-items: flex-start; }
   blockquote { margin: 16px 0; }
@@ -114,16 +105,7 @@ img.profile-photo { float: right; width: 150px; height: 150px; object-fit: cover
 
 /* Comments (Waline), headed like the sidebar sections */
 #comments { margin-top: 36px; }
-#comments h3 {
-  font-size: 11px;
-  font-weight: normal;
-  color: #777;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 5px;
-  margin: 0 0 12px;
-}
+#comments h3 { font-size: 20px; font-weight: 700; color: #111; margin: 0 0 12px; }
 
 /* Display math scrolls sideways on narrow screens instead of overflowing */
 .katex-display { overflow-x: auto; overflow-y: hidden; }
