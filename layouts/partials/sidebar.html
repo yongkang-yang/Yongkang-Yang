@@ -1,0 +1,21 @@
+{{ $posts := where site.RegularPages "Section" "posts" }}
+<aside id="secondary">
+  <h3>About</h3>
+  <p class="blurb">{{ site.Params.blurb | markdownify }}</p>
+
+  <h3>Recent posts</h3>
+  <ul>
+    {{ range first 6 $posts }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+  </ul>
+
+  <h3>Categories</h3>
+  <ul>
+    {{ range site.Taxonomies.categories.ByCount }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>{{ end }}
+  </ul>
+
+  <h3>Archives</h3>
+  <ul>
+    {{ range $posts.GroupByDate "January 2006" }}<li>{{ .Key }} ({{ len .Pages }})</li>{{ end }}
+  </ul>
+  <p><a href="{{ "archives/" | relURL }}">All posts</a> · <a href="{{ "tags/" | relURL }}">Tags</a></p>
+</aside>
