@@ -2,9 +2,10 @@ baseURL = 'https://yongkang-yang.github.io/Yongkang-Yang/'
 languageCode = 'en'
 title = 'Yongkang Yang'
 enableRobotsTXT = true
+summaryLength = 60
 
 [pagination]
-  pagerSize = 5
+  pagerSize = 10
 
 [services.googleAnalytics]
   ID = 'G-YC066ZFZ27'
