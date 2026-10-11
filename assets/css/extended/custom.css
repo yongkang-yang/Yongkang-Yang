@@ -8,14 +8,13 @@
   margin: 0 0 1rem 1.5rem;
 }
 
-/* Teaching entries: thumbnail beside description */
+/* Teaching entries: text with an optional video */
 .teaching-item {
   display: flex;
   gap: 1.25rem;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
-.post-content .teaching-item img,
 .post-content .teaching-item video {
   flex: 0 0 150px;
   width: 150px;
