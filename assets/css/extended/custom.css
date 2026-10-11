@@ -97,3 +97,32 @@
 .entry-tags { margin-top: 4px; font-size: 12px; line-height: 1.6; color: var(--secondary); }
 .entry-tags a { position: relative; z-index: 1; color: var(--secondary); }
 .entry-tags a:hover { color: var(--primary); text-decoration: underline; }
+
+/* Research page: typography and spacing, without changing citation layout */
+.post-content h2.research-section {
+  margin: 2rem 0 0.85rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.post-content h2.research-section ~ p {
+  margin-bottom: 1rem;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+.post-content h2.research-section + ol {
+  margin-top: 0.2rem;
+  padding-inline-start: 1.45rem;
+}
+.post-content h2.research-section + ol > li {
+  margin: 0 0 0.85rem;
+  padding-inline-start: 0.15rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+@media (max-width: 600px) {
+  .post-content h2.research-section {
+    font-size: 1.22rem;
+    margin-top: 1.65rem;
+  }
+}
