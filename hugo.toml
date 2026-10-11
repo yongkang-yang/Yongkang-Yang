@@ -1,0 +1,66 @@
+baseURL = 'https://yongkang-yang.github.io/Yongkang-Yang/'
+languageCode = 'en'
+title = 'Yongkang Yang'
+enableRobotsTXT = true
+summaryLength = 60
+
+[pagination]
+  pagerSize = 10
+
+[services.googleAnalytics]
+  ID = 'G-YC066ZFZ27'
+
+[services.rss]
+  limit = 20
+
+[params]
+  author = 'Yongkang Yang'
+  description = "Yongkang Yang is a PhD candidate in Organizational Behavior at Rotterdam School of Management, Erasmus University Rotterdam. Notes on research, methods, and tools."
+  tagline = "Notes on research, methods, and tools. By Yongkang Yang"
+  blurb = """PhD candidate in Organizational Behavior at [RSM](https://www.rsm.nl/), Erasmus University Rotterdam, studying team membership change, multicultural teams, team diversity, and AI in organizations. [More about me](about/)."""
+  epigraph = "莫见乎隐，莫显乎微，故君子慎其独也。 <span>——《礼记·中庸》</span>"
+
+  # Anonymous comments via Waline (backend on Vercel, data in Neon).
+  [params.waline]
+    serverURL = "https://ykblog-comments.vercel.app"
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 20
+  [[menu.main]]
+    name = "Research"
+    url = "/research/"
+    weight = 30
+  [[menu.main]]
+    name = "Teaching"
+    url = "/teaching/"
+    weight = 40
+  [[menu.main]]
+    name = "Archives"
+    url = "/archives/"
+    weight = 50
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 60
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    style = 'github'
