@@ -7,7 +7,9 @@ hideMeta: true
 comments: false
 ---
 
-I teach and supervise in organizational behavior and human resource management at Rotterdam School of Management, Erasmus University Rotterdam.
+I teach and supervise in organizational behavior and human resource management.
+
+## Rotterdam School of Management, Erasmus University Rotterdam
 
 <div class="teaching-list">
 <div class="teaching-item">
