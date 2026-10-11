@@ -17,18 +17,15 @@ My research focuses on team membership change, multicultural teams, team diversi
 
 **[How and when future orientation shapes weekly career adaptability](https://doi.org/10.1002/cdq.12351)**  
 **Yongkang Yang**, [Yidong Tu](https://scholar.google.com/citations?user=skk-imMAAAAJ), [Shuoli Wang\*](https://gsxy.hbue.edu.cn/85/04/c7048a296196/page.htm), [Yajun Fan](https://busrpg.hkbu.edu.hk/people/student-profile/fan-yajun.html)  
-*The Career Development Quarterly*, 2024, 72, 189–202  
-[[Project page]](https://doi.org/10.1002/cdq.12351) [[PDF]](<../data/Yang et al. - How and when future orientation shapes weekly career adaptability.pdf>)
+*The Career Development Quarterly*, 2024, 72, 189–202
 
 **[Treat floating people fairly: How compensation equity and multilevel social exclusion influence prosocial behavior among China's floating population](https://doi.org/10.1007/s10551-020-04641-y)**  
 [Yidong Tu](https://scholar.google.com/citations?user=skk-imMAAAAJ), [Ying Zhang\*](https://www.researchgate.net/profile/Ying-Zhang-246), **Yongkang Yang**, [Shengfeng Lu](https://link.springer.com/article/10.1007/s10551-020-04641-y#auth-Shengfeng-Lu-Aff1)  
-*Journal of Business Ethics*, 2022, 175(2), 323–338  
-[[Project page]](https://doi.org/10.1007/s10551-020-04641-y) [[PDF]](<../data/Tu et al. - 2022 - Treat Floating People Fairly How Compensation Equity and Multilevel Social Exclusion Influence Pros.pdf>)
+*Journal of Business Ethics*, 2022, 175(2), 323–338
 
 **[Focusing on the past, present, or future? Why proactive personality increases weekly subjective well-being](https://doi.org/10.1007/s10902-021-00461-7)**  
 [Shuoli Wang](https://gsxy.hbue.edu.cn/85/04/c7048a296196/page.htm), [Yidong Tu\*](https://scholar.google.com/citations?user=skk-imMAAAAJ), [Tongtong Zhao](https://research.rug.nl/en/persons/tongtong-zhao), **Yongkang Yang**  
-*Journal of Happiness Studies*, 2022, 23(4), 1543–1560  
-[[Project page]](https://doi.org/10.1007/s10902-021-00461-7) [[PDF]](<../data/Wang et al. - 2022 - Focusing on the Past, Present, or Future Why Proactive Personality Increases Weekly Subjective Well.pdf>)
+*Journal of Happiness Studies*, 2022, 23(4), 1543–1560
 
 \* Corresponding author
 
