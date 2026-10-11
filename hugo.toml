@@ -1,8 +1,9 @@
 baseURL = 'https://yongkang-yang.github.io/Yongkang-Yang/'
 languageCode = 'en'
 title = 'Yongkang Yang'
+theme = 'PaperMod'
 enableRobotsTXT = true
-summaryLength = 60
+summaryLength = 120
 
 [pagination]
   pagerSize = 10
@@ -16,13 +17,44 @@ summaryLength = 60
 [params]
   author = 'Yongkang Yang'
   description = "Yongkang Yang is a PhD candidate in Organizational Behavior at Rotterdam School of Management, Erasmus University Rotterdam. Notes on research, methods, and tools."
-  tagline = "Notes on research, methods, and tools"
-  blurb = """PhD candidate in Organizational Behavior at [RSM](https://www.rsm.nl/), Erasmus University Rotterdam, studying team membership change, multicultural teams, team diversity, and AI in organizations. [More about me](about/)."""
-  epigraph = "莫见乎隐，莫显乎微，故君子慎其独也。 <span>——《礼记·中庸》</span>"
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowFullTextinRSS = true
+  comments = true
 
-  # Anonymous comments via Waline (backend on Vercel, data in Neon).
+  [params.homeInfoParams]
+    Title = "Yongkang Yang"
+    Content = """PhD candidate in Organizational Behavior at [Rotterdam School of Management](https://www.rsm.nl/), Erasmus University Rotterdam. \
+I study team membership change, multicultural teams, team diversity, and how AI shapes people and organizations. \
+This site collects my notes on research, methods, and tools. See [About](about/), [Research](research/), and [Teaching](teaching/)."""
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:ykyang.research@gmail.com"
+  [[params.socialIcons]]
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?user=g5nED5gAAAAJ"
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/yongkang-yang"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/yongkang-yang-0530a1205/"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "index.xml"
+
   [params.waline]
     serverURL = "https://ykblog-comments.vercel.app"
+
+  [params.assets]
+    favicon = "images/favicon/favicon.ico"
+    favicon16x16 = "images/favicon/favicon-16x16.png"
+    favicon32x32 = "images/favicon/favicon-32x32.png"
+    apple_touch_icon = "images/favicon/apple-touch-icon.png"
 
 [menu]
   [[menu.main]]
@@ -49,9 +81,13 @@ summaryLength = 60
     name = "Tags"
     url = "/tags/"
     weight = 60
+  [[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 70
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
 
 [markup]
   [markup.goldmark]
@@ -62,5 +98,3 @@ summaryLength = 60
       [markup.goldmark.extensions.passthrough.delimiters]
         block = [['\[', '\]'], ['$$', '$$']]
         inline = [['\(', '\)'], ['$', '$']]
-  [markup.highlight]
-    style = 'github'

@@ -1,6 +1,5 @@
 {{- with site.Params.waline }}
 <section id="comments">
-  <h3>Comments</h3>
   <div id="waline"></div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@3.16.0/dist/waline.css">
   <script type="module">
@@ -10,7 +9,7 @@
       serverURL: '{{ .serverURL }}',
       path: location.pathname,
       lang: 'en',
-      dark: false,
+      dark: 'body.dark',
       login: 'disable',
       meta: ['nick', 'mail', 'link'],
       requiredMeta: ['nick'],
