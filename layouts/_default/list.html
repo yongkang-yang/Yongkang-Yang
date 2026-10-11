@@ -79,6 +79,9 @@
       </span>
       {{- end }}
     </h2>
+    {{- with .GetTerms "tags" }}
+    <div class="entry-tags">{{ range $i, $t := . }}{{ if $i }} {{ end }}<a href="{{ $t.Permalink }}">#{{ $t.LinkTitle }}</a>{{ end }}</div>
+    {{- end }}
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
@@ -88,7 +91,6 @@
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}
-    {{- with .GetTerms "tags" }}&nbsp;·&nbsp;<span class="entry-tags">{{ range $i, $t := . }}{{ if $i }} {{ end }}<a href="{{ $t.Permalink }}">#{{ $t.LinkTitle }}</a>{{ end }}</span>{{ end }}
     {{- if and site.Params.waline (.Param "comments") }}&nbsp;·&nbsp;<a class="entry-comments" href="{{ .Permalink }}#comments">Comments: <span class="waline-comment-count" data-path="{{ .RelPermalink }}">0</span></a>{{ end }}
   </footer>
   {{- end }}
