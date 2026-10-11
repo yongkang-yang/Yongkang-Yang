@@ -1,0 +1,53 @@
+name: BlogWatcher writing assistant
+on:
+  schedule:
+    - cron: "0 9 * * 0" # Weekly Sunday 09:00 UTC, about late morning Amsterdam
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "topics or draft"
+        required: true
+        type: choice
+        options: [topics, draft]
+      topic:
+        description: "Topic for draft mode"
+        required: false
+        type: string
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+concurrency:
+  group: blogwatcher-writing
+  cancel-in-progress: false
+jobs:
+  writing:
+    runs-on: ubuntu-latest
+    env:
+      IDEAS_EXPORT_KEY: ${{ secrets.IDEAS_EXPORT_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate weekly topic proposals
+        if: github.event_name == 'schedule' || inputs.mode == 'topics'
+        run: |
+          python3 scripts/blogwatcher_writing.py topics > "${RUNNER_TEMP}/writing-topics.md"
+          gh issue create --title "Blog ideas — $(date -u +%F)" --body-file "${RUNNER_TEMP}/writing-topics.md"
+      - name: Generate private review draft
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'draft'
+        env:
+          WRITING_TOPIC: ${{ inputs.topic }}
+        run: |
+          test -n "$WRITING_TOPIC"
+          python3 scripts/blogwatcher_writing.py draft --topic "$WRITING_TOPIC"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="blog-draft/${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git add content/posts/
+          git commit -m "Draft blog article for human review"
+          git push origin "$branch"
+          gh pr create --draft --base master --head "$branch" \
+            --title "Draft blog: $WRITING_TOPIC" \
+            --body "AI-assisted draft from private BlogWatcher annotations. Review claims, source links, attribution and privacy. The article has draft: true and cannot appear on the public site until explicitly approved and changed. Do not auto-merge."
