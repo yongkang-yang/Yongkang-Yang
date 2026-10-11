@@ -34,3 +34,20 @@ CLOUD.md in the blogwatcher repo.
 - Don't expose unpublished manuscripts, personal data, credentials, or private
   notes verbatim.
 - AI proposes; Yongkang decides. Never publish or merge a post on its own.
+
+## Public writing safeguards
+
+- Protect privacy by default. Do not reveal private agent names, account access,
+  permissions, system configuration, internal workflows, private conversations,
+  unpublished work, or details of a personal incident. Do not quote private notes.
+- First-person opinions are fine, but replace identifiable personal experiences
+  with a general example or a linked public source. Never invent an experience.
+- Avoid political opinions, partisan statements, criminal allegations, and
+  sensitive or controversial commentary. Focus on the technical or research
+  point. If an external source discusses a sensitive event, include only the
+  neutral, verified facts needed to explain the point, or omit the example.
+- Before sharing a draft, check the body, title, front matter, quotations,
+  images, captions, and links for private information and sensitive claims.
+  Flag any uncertain detail for review; do not assume it is safe to publish.
+- Keep `draft: true` and require explicit approval before publication or
+  merging any pull request.
