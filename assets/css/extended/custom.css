@@ -8,23 +8,58 @@
   margin: 0 0 1rem 1.5rem;
 }
 
-/* Teaching entries: text with an optional video */
-.teaching-item {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
-  margin-bottom: 0.75rem;
+/* Teaching: compact academic CV-style list */
+.post-content .teaching-school {
+  margin: 1.6rem 0 0.55rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
-.post-content .teaching-item video {
-  flex: 0 0 150px;
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px;
+.post-content .teaching-university {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--secondary);
+}
+.teaching-list {
   margin: 0;
 }
-.post-content .teaching-item p {
-  margin: 0.2rem 0;
+.teaching-item {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  column-gap: 1.15rem;
+  align-items: start;
+  padding: 0.72rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.teaching-item:last-child {
+  border-bottom: none;
+}
+.teaching-date {
+  padding-top: 0.08rem;
+  font-size: 0.87rem;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+.post-content .teaching-course {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 550;
+  line-height: 1.45;
+}
+.post-content .teaching-meta {
+  margin: 0.18rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--secondary);
+}
+.post-content .teaching-link {
+  display: inline-block;
+  margin-top: 0.28rem;
+  font-size: 0.88rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 @media (max-width: 600px) {
@@ -34,8 +69,9 @@
     margin: 0 auto 1rem;
   }
   .teaching-item {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
+    row-gap: 0.18rem;
+    padding: 0.65rem 0;
   }
 }
 
