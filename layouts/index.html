@@ -7,8 +7,9 @@
   {{ partial "post-meta.html" . }}
   <div class="post-content">
     {{ .Summary }}
-    {{ if .Truncated }}<p><a href="{{ .RelPermalink }}">Read the rest of this entry &raquo;</a></p>{{ end }}
+    {{ if .Truncated }}<p><a href="{{ .RelPermalink }}">Continue reading &rarr;</a></p>{{ end }}
   </div>
+  {{ partial "post-footer.html" . }}
   {{ partial "math-css.html" . }}
 </article>
 {{ end }}

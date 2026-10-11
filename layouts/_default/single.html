@@ -7,6 +7,7 @@
   </div>
   {{ partial "math-css.html" . }}
   {{ if eq .Section "posts" }}
+  {{ partial "post-footer.html" . }}
   <p class="pager">
     {{ with .NextInSection }}<a href="{{ .RelPermalink }}">&laquo; {{ .Title }}</a>{{ end }}
     {{ if and .NextInSection .PrevInSection }} &nbsp;|&nbsp; {{ end }}
