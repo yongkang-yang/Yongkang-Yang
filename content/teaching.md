@@ -21,14 +21,14 @@ I teach and supervise in organizational behavior and human resource management.
   </div>
 </div>
 <div class="teaching-item">
-  <span class="teaching-date">2026<br>Spring 2023</span>
+  <span class="teaching-date">2026<br>2023</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Master Thesis Supervision</h3>
     <p class="teaching-meta">Master level</p>
   </div>
 </div>
 <div class="teaching-item">
-  <span class="teaching-date">Fall 2025</span>
+  <span class="teaching-date">2025</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Leadership Development and Training</h3>
     <p class="teaching-meta">Master level · Teaching evaluation 4.4/5</p>
@@ -42,21 +42,21 @@ I teach and supervise in organizational behavior and human resource management.
   </div>
 </div>
 <div class="teaching-item">
-  <span class="teaching-date">2025<br>Fall 2024</span>
+  <span class="teaching-date">2025<br>2024</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Organizational Behavior Workshop</h3>
     <p class="teaching-meta">Bachelor level</p>
   </div>
 </div>
 <div class="teaching-item">
-  <span class="teaching-date">Spring 2023</span>
+  <span class="teaching-date">2023</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Bachelor Thesis Supervision</h3>
     <p class="teaching-meta">Bachelor level</p>
   </div>
 </div>
 <div class="teaching-item">
-  <span class="teaching-date">Fall 2022</span>
+  <span class="teaching-date">2022</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Professional Development and Consulting</h3>
     <p class="teaching-meta">Master level · Teaching evaluation 4.0/5</p>
