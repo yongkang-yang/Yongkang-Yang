@@ -60,3 +60,6 @@
 /* Blog list: tag and comment links sit above the card's full-size link */
 .entry-footer a { position: relative; z-index: 1; color: var(--secondary); }
 .entry-footer a:hover { color: var(--primary); text-decoration: underline; }
+.entry-tags { margin-top: 4px; font-size: 12px; line-height: 1.6; color: var(--secondary); }
+.entry-tags a { position: relative; z-index: 1; color: var(--secondary); }
+.entry-tags a:hover { color: var(--primary); text-decoration: underline; }
