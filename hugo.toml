@@ -25,11 +25,6 @@ summaryLength = 120
   ShowFullTextinRSS = true
   comments = true
 
-  [params.homeInfoParams]
-    Title = "Yongkang Yang"
-    Content = """PhD candidate in Organizational Behavior at [Rotterdam School of Management](https://www.rsm.nl/), Erasmus University Rotterdam. \
-I study team membership change, multicultural teams, team diversity, and how AI shapes people and organizations. \
-This site collects my notes on research, methods, and tools. See [About](about/), [Research](research/), and [Teaching](teaching/)."""
 
   [[params.socialIcons]]
     name = "email"
@@ -58,12 +53,12 @@ This site collects my notes on research, methods, and tools. See [About](about/)
 
 [menu]
   [[menu.main]]
-    name = "Blog"
+    name = "About"
     url = "/"
     weight = 10
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Blog"
+    url = "/posts/"
     weight = 20
   [[menu.main]]
     name = "Research"
