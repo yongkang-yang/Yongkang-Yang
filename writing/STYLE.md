@@ -29,8 +29,11 @@ CLOUD.md in the blogwatcher repo.
 - Make one point clearly rather than translating or summarising whole sources.
 - Short: normally 400–700 words.
 - First-person claims come from Yongkang's own notes, never invented.
-- Link the sources. Keep his views apart from the sources' claims; label
-  uncertainty.
+- Hyperlink every primary source where it is mentioned: the original
+  report, paper, announcement or interview, not a news digest or a
+  secondary write-up. Use secondary coverage only for facts the primary
+  source doesn't state, and link that too.
+- Keep his views apart from the sources' claims; label uncertainty.
 - Don't expose unpublished manuscripts, personal data, credentials, or private
   notes verbatim.
 - AI proposes; Yongkang decides. Never publish or merge a post on its own.
