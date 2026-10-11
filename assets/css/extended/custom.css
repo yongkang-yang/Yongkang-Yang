@@ -13,7 +13,7 @@
   display: flex;
   gap: 1.25rem;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 .post-content .teaching-item video {
   flex: 0 0 150px;
