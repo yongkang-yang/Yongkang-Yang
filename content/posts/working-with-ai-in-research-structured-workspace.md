@@ -13,9 +13,9 @@ categories:
 draft: false
 ---
 
-Academic researchers have good reasons to be cautious about artificial intelligence (AI). A confident answer can contain an invented reference, an unsupported claim, or a wrong analysis. Research requires more than a fluent response: we need to know where information came from, what changed, and who checked it.
+Artificial intelligence (AI) is already part of everyday research. Avoiding it entirely is becoming unrealistic. Rather than trying to keep AI out of academic work, I think we should ask how to work with it more effectively. AI is particularly useful for tasks that demand patience and attention to detail: proofreading manuscripts, checking consistency across drafts, and flagging possible errors in text or tables. We still need to verify its suggestions, but it can save us considerable time.
 
-After using [OpenClaw](https://github.com/openclaw/openclaw), I began to think less about *which AI tool to use* and more about *how to work with AI over the life of a research project*. The most useful lesson was simple: give the AI a workspace, not just a prompt.
+So how can we make AI work better for us? Inspired partly by my experience with [OpenClaw](https://github.com/openclaw/openclaw), I have been exploring a simple idea: **make the research project itself AI-friendly**. A clear folder structure and a few short Markdown files can help an AI assistant understand what the project is about, where things belong, and what has already been done.
 
 ## A small, shared workspace
 
