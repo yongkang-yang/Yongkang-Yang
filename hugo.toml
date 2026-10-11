@@ -20,6 +20,13 @@ summaryLength = 60
   blurb = """PhD candidate in Organizational Behavior at [RSM](https://www.rsm.nl/), Erasmus University Rotterdam, studying team membership change, multicultural teams, team diversity, and AI in organizations. [More about me](about/)."""
   epigraph = "莫见乎隐，莫显乎微，故君子慎其独也。 <span>——《礼记·中庸》</span>"
 
+  # Comments via giscus (GitHub Discussions). They stay hidden until categoryId is set.
+  [params.giscus]
+    repo = "yongkang-yang/Yongkang-Yang"
+    repoId = "R_kgDONThnEA"
+    category = "Comments"
+    categoryId = ""
+
 [menu]
   [[menu.main]]
     name = "Blog"
@@ -53,5 +60,10 @@ summaryLength = 60
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)'], ['$', '$']]
   [markup.highlight]
     style = 'github'

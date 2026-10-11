@@ -12,6 +12,8 @@ categories:
 
 Just found out that Thunderbird has a mailmerge service that is so much better than Microsoft Word/Outlook. Here's why you should make the switch.
 
+<!--more-->
+
 ## The Problem with Microsoft Mail Merge
 
 If you've tried to use mail merge in Microsoft Office, you know the pain:

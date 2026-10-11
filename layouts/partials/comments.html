@@ -1,0 +1,21 @@
+{{- with site.Params.giscus }}{{ if and .repoId .categoryId }}
+<section id="comments">
+  <h3>Comments</h3>
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ .repo }}"
+    data-repo-id="{{ .repoId }}"
+    data-category="{{ .category }}"
+    data-category-id="{{ .categoryId }}"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="{{ "css/giscus.css" | absURL }}"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+</section>
+{{ end }}{{ end -}}

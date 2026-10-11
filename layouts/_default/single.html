@@ -5,12 +5,14 @@
   <div class="post-content">
     {{ .Content }}
   </div>
+  {{ partial "math-css.html" . }}
   {{ if eq .Section "posts" }}
   <p class="pager">
     {{ with .NextInSection }}<a href="{{ .RelPermalink }}">&laquo; {{ .Title }}</a>{{ end }}
     {{ if and .NextInSection .PrevInSection }} &nbsp;|&nbsp; {{ end }}
     {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &raquo;</a>{{ end }}
   </p>
+  {{ partial "comments.html" . }}
   {{ end }}
 </article>
 {{ end }}

@@ -111,3 +111,19 @@ img.profile-photo { float: right; width: 150px; height: 150px; object-fit: cover
   .teaching-item { flex-direction: column; align-items: flex-start; }
   blockquote { margin: 16px 0; }
 }
+
+/* Comments (giscus), headed like the sidebar sections */
+#comments { margin-top: 36px; }
+#comments h3 {
+  font-size: 11px;
+  font-weight: normal;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 5px;
+  margin: 0 0 12px;
+}
+
+/* Display math scrolls sideways on narrow screens instead of overflowing */
+.katex-display { overflow-x: auto; overflow-y: hidden; }

@@ -15,7 +15,7 @@
 
   <h3>Archives</h3>
   <ul>
-    {{ range $posts.GroupByDate "January 2006" }}<li>{{ .Key }} ({{ len .Pages }})</li>{{ end }}
+    {{ range $posts.GroupByDate "January 2006" }}<li><a href="{{ "archives/" | relURL }}#{{ (index .Pages 0).Date.Format "2006-01" }}">{{ .Key }}</a> ({{ len .Pages }})</li>{{ end }}
   </ul>
   <p><a href="{{ "archives/" | relURL }}">All posts</a> · <a href="{{ "tags/" | relURL }}">Tags</a></p>
 </aside>
