@@ -1,9 +1,6 @@
 ---
 title: "Research"
 url: "/research/"
-ShowReadingTime: false
-ShowPostNavLinks: false
-hideMeta: true
 ---
 
 My research focuses on team membership change, multicultural teams, team diversity, and information elaboration. I use longitudinal and social network approaches to study how teams adapt and perform in dynamic contexts, and I also study how artificial intelligence shapes people, teams, and organizations.
