@@ -11,9 +11,9 @@ My research focuses on team membership change, multicultural teams, team diversi
 
 <h2 class="research-section">Publications</h2>
 
-**With Whom You Elaborate Matters: How Learning Orientation Impacts Cross-Culture and Same-Culture Information Elaboration in Culturally Diverse Teams**  
+**[With Whom You Elaborate Matters: How Learning Orientation Impacts Cross-Culture and Same-Culture Information Elaboration in Culturally Diverse Teams](https://doi.org/10.1007/s10869-026-10161-9)**  
 **Yongkang Yang\***, [Daan van Knippenberg](https://business.rice.edu/person/daan-van-knippenberg), [Anne Nederveen Pieterse](https://www.rsm.nl/nl/people/anne-nederveen-pieterse/), [Jia Li](https://orcid.org/0000-0002-1107-0835)  
-*Journal of Business and Psychology*, in press
+*Journal of Business and Psychology*, 2026
 
 **[How and when future orientation shapes weekly career adaptability](https://doi.org/10.1002/cdq.12351)**  
 **Yongkang Yang**, [Yidong Tu](https://scholar.google.com/citations?user=skk-imMAAAAJ), [Shuoli Wang\*](https://gsxy.hbue.edu.cn/85/04/c7048a296196/page.htm), [Yajun Fan](https://busrpg.hkbu.edu.hk/people/student-profile/fan-yajun.html)  
