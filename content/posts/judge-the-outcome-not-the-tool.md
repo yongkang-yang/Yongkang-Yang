@@ -10,7 +10,6 @@ categories:
   - Technology
 ---
 
-# Judge the Outcome, Not the Tool
 
 Nobody asks a novelist to write a manuscript by hand to prove that it counts. We read the book, not the handwriting.
 
