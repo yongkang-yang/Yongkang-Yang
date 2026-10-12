@@ -26,7 +26,7 @@ That finding matters for a specific reason: a higher assisted score does not pro
 
 Learning and delivery require different tests. To assess learning, remove the assistance and see whether someone can apply the skill. To assess delivery, examine the work: Is the analysis sound? Does the program work? Does the argument hold? In each case, the outcome—not the method—sets the standard.
 
-Some companies are already putting this into practice. At [Speak](https://www.businessinsider.com/ai-startup-cto-explains-shift-in-engineering-hiring-2026-4), engineering candidates are assessed on how they use AI to build features, debug problems, and explain their decisions—not on solving isolated LeetCode-style puzzles. The question is whether they can deliver reliable work with the tools they will actually use.
+Lauren Tan, who leads Grok Bot engineering, [proposed](https://x.com/poteto/status/2108689504811012135) two technical interview rounds: explain a system design, then build a real project with AI agents. The first tests engineering judgment; the second tests whether a candidate can turn an idea into a high-quality result. It is a proposal, not an announced company policy—but it captures the point: assess what people can deliver with the tools available.
 
 Responsibility remains. Claims and calculations need checking, and rules on confidentiality, disclosure and authorship still apply. But requiring unaided work simply because it is unaided mistakes the process for the purpose.
 
