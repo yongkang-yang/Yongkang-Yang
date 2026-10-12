@@ -27,7 +27,29 @@ CLOUD.md in the blogwatcher repo.
 
 - English, for an international academic audience.
 - Make one point clearly rather than translating or summarising whole sources.
-- Short: normally 400–700 words.
+- **Opinion posts:** 500 words maximum.
+- **In-depth articles:** 1,000 words maximum.
+- Count words in the published article body (including headings and quoted text),
+  excluding Markdown front matter. Edit down rather than treating these as targets.
+## Voice: direct, natural, specific
+
+- Write like a person with a point to make, not an AI assistant trying to sound
+  balanced. State the point plainly and let evidence and examples do the work.
+- Remove defensive caveats that add no useful information, such as
+  "It is a proposal, not an announced company policy—but it captures the point."
+  Do not add a disclaimer after every claim.
+- Avoid stock AI phrasing: "It is important to note," "This highlights the
+  importance of," "It is worth considering," and other empty transitions.
+- Cut repeated explanations, padded introductions, abstract summaries, and
+  formulaic "not X but Y" constructions. Use concrete examples when useful.
+- Prefer clear verbs, short sentences, and natural sentence variation.
+  Do not turn every paragraph into a three-part list or a mini-conclusion.
+- Keep necessary distinctions: state what a study actually found, attribute
+  opinions correctly, and qualify claims when the uncertainty changes their
+  meaning. Accuracy is not a reason to write defensively.
+- In the final edit, delete any sentence that only repeats, softens, or explains
+  the preceding point without adding evidence or insight.
+
 - First-person claims come from Yongkang's own notes, never invented.
 - Hyperlink every primary source where it is mentioned: the original
   report, paper, announcement or interview, not a news digest or a
