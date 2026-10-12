@@ -31,6 +31,16 @@ CLOUD.md in the blogwatcher repo.
 - **In-depth articles:** 1,000 words maximum.
 - Count words in the published article body (including headings and quoted text),
   excluding Markdown front matter. Edit down rather than treating these as targets.
+- First-person claims come from Yongkang's own notes, never invented.
+- Hyperlink every primary source where it is mentioned: the original
+  report, paper, announcement or interview, not a news digest or a
+  secondary write-up. Use secondary coverage only for facts the primary
+  source doesn't state, and link that too.
+- Keep his views apart from the sources' claims; label uncertainty.
+- Don't expose unpublished manuscripts, personal data, credentials, or private
+  notes verbatim.
+- AI proposes; Yongkang decides. Never publish or merge a post on its own.
+
 ## Voice: direct, natural, specific
 
 - Write like a person with a point to make, not an AI assistant trying to sound
@@ -49,16 +59,6 @@ CLOUD.md in the blogwatcher repo.
   meaning. Accuracy is not a reason to write defensively.
 - In the final edit, delete any sentence that only repeats, softens, or explains
   the preceding point without adding evidence or insight.
-
-- First-person claims come from Yongkang's own notes, never invented.
-- Hyperlink every primary source where it is mentioned: the original
-  report, paper, announcement or interview, not a news digest or a
-  secondary write-up. Use secondary coverage only for facts the primary
-  source doesn't state, and link that too.
-- Keep his views apart from the sources' claims; label uncertainty.
-- Don't expose unpublished manuscripts, personal data, credentials, or private
-  notes verbatim.
-- AI proposes; Yongkang decides. Never publish or merge a post on its own.
 
 ## Public writing safeguards
 
