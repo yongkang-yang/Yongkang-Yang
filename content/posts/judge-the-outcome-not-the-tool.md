@@ -22,14 +22,10 @@ I think much of the debate becomes confused because two different purposes are t
 
 A [recent experimental study](https://arxiv.org/abs/2604.04721v5), *AI Assistance Reduces Persistence and Hurts Independent Performance*, illustrates the distinction. Across three randomized experiments involving 1,222 recruited participants, AI assistance improved immediate performance on mathematical reasoning and reading comprehension tasks. After the assistance was withdrawn, previously assisted participants performed worse and skipped more problems than participants who had worked without AI.
 
-That is evidence against treating assisted practice scores as proof of independent learning. It is not evidence that an accurately completed task becomes worthless because AI helped complete it. Nor do these brief experiments establish permanent cognitive decline or show that every form of AI assistance has the same effect.
+That finding matters for a specific reason: a higher assisted score does not prove independent learning. It says little about the value of an AI-assisted final product, and it does not establish lasting cognitive harm.
 
-If the purpose is learning, the desired outcome is understanding. Asking an assistant to supply the final answer may therefore be the wrong use of the tool. But AI can also offer patient, step-by-step instruction: explain a difficult concept in several ways, work through an example, ask the learner to attempt the next step and respond to mistakes without impatience. The relevant question is whether this interaction actually helps the learner understand and apply the method. Detailed explanations alone do not guarantee learning; independent application is a better test.
+Learning and delivery require different tests. To assess learning, remove the assistance and see whether someone can apply the skill. To assess delivery, examine the work: Is the analysis sound? Does the program work? Does the argument hold? In each case, the outcome—not the method—sets the standard.
 
-If the purpose is delivery, the desired outcome is a useful product. A report needs sound analysis. A program needs to work. An article needs a clear argument. If AI assistance improves those outcomes while reducing the time required, that is a reason to use it—not a defect that needs an apology.
+Responsibility remains. Claims and calculations need checking, and rules on confidentiality, disclosure and authorship still apply. But requiring unaided work simply because it is unaided mistakes the process for the purpose.
 
-Responsibility does not disappear. An AI-generated claim still needs evidence; an AI-generated calculation still needs checking. Some tasks also impose legitimate requirements about confidentiality, disclosure or independent authorship. Those requirements belong in the evaluation. But outside such constraints, “a human did it unaided” is not a quality standard. It describes a process, not an achievement.
-
-The handwriting analogy is not an argument that pens, computers and language models are identical. It is an argument against mistaking a familiar method for the purpose of the work.
-
-Judge tools by the outcomes they help produce. For learning, demand understanding. For delivery, demand quality. If AI helps achieve the relevant outcome faster and better, the burden is on the objection to explain what has actually been lost.
+Pens, computers and language models are different tools. The point is not to treat them as identical. For learning, demand understanding. For delivery, demand quality. Judge the outcome, not the tool.
