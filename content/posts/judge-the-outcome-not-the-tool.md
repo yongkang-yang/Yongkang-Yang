@@ -2,7 +2,7 @@
 title: "Judge the Outcome, Not the Tool"
 date: 2026-10-12
 author: Yongkang Yang
-draft: true
+draft: false
 tags:
   - AI
   - Learning
