@@ -1,5 +1,5 @@
 ---
-title: "Letting a Chatbot Edit the Document Open on My Mac"
+title: "Letting a Chatbot Edit the Word Document Open on your Device"
 date: 2026-10-13
 author: Yongkang Yang
 draft: true
@@ -15,7 +15,7 @@ Most AI writing help takes one of two routes. The first runs through the clipboa
 
 Both are poor at small adjustments. Fixing one sentence or one heading should not mean a round trip through a chat window or a rewritten file.
 
-This week I connected a word processor on my Mac to the AI tools I already use, including the web versions of Claude and ChatGPT. I select a heading, type "translate this and put it underneath," and the translated line appears in the document, in the same heading style. Nothing else in the file moves.
+This week I connected a word processor on my Mac to the AI tools I already use. I select a heading, type "write a Chinese poem and put it underneath," and it appears in the document instantly. Nothing else in the file moves. see an example below:
 
 ![A WordCraft window showing a short test document with a four-line Chinese poem at the end](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-a82e9b.png)
 
@@ -23,13 +23,9 @@ This week I connected a word processor on my Mac to the AI tools I already use, 
 
 ![A ChatGPT conversation: a request for a seven-character quatrain at the end of the document, and the reply confirming it was added](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-87cd1f.png)
 
-*The request that produced the poem above. The reply also reports that the document has not been saved to disk.*
-
 ## An editor built to be driven
 
 The editor is [WordCraft](https://getartcraft.com/apps/wordcraft), an [open-source](https://github.com/storytold/wordcraft) word processor written in Rust that reads and writes .docx files. Every action in it is a command with an id, and the same commands drive the ribbon, the keyboard shortcuts, a command-line tool and an [MCP](https://modelcontextprotocol.io/) server. MCP, the Model Context Protocol, is the common standard that lets AI applications call external tools.
-
-Two consequences matter for writing. An agent can ask the editor what is currently selected, so "this paragraph" means something. And it can check its own edit by reading the document's structure instead of guessing from a screenshot.
 
 ## How to connect your word tab to a cloud agent
 
@@ -97,4 +93,6 @@ curl -i -X POST https://docs.example.com/mcp
 # www-authenticate: Bearer ... resource_metadata="https://docs.example.com/.well-known/..."
 ```
 
-Then add a custom connector in the chatbot's settings: a name, the URL ending in `/mcp`, and OAuth as the authentication method. The first connection opens Cloudflare's sign-in page.
+Then add a custom connector in the chatbot's settings: a name, the URL ending in `/mcp`, and OAuth as the authentication method. The first connection opens Cloudflare's sign-in page. 
+
+Enjoy!
