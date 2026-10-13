@@ -2,7 +2,7 @@
 title: "Letting a Chatbot Edit an Open Word Document"
 date: 2026-10-13
 author: Yongkang Yang
-draft: true
+draft: false
 tags:
   - AI
   - MCP
