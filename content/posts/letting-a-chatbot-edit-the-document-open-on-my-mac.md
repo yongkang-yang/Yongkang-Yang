@@ -17,11 +17,11 @@ I wanted the edit to happen where I was already writing.
 
 With [WordCraft](https://getartcraft.com/apps/wordcraft), it can. In a simple test, I asked ChatGPT to add a Chinese seven-character quatrain to the end of an open document. The four lines appeared in the editor, with no file export or copy-and-paste step.
 
+![ChatGPT conversation requesting a seven-character quatrain and confirming the edit](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-87cd1f.png)
+
 ![WordCraft document with a four-line Chinese poem added at the end](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-a82e9b.png)
 
 *The poem was added directly to the open document.*
-
-![ChatGPT conversation requesting a seven-character quatrain and confirming the edit](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-87cd1f.png)
 
 ## Why WordCraft works
 
