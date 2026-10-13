@@ -1,8 +1,8 @@
 ---
-title: "Letting a Chatbot Edit the Word Document Open on your Device"
+title: "Letting a Chatbot Edit an Open Word Document"
 date: 2026-10-13
 author: Yongkang Yang
-draft: false
+draft: true
 tags:
   - AI
   - MCP
@@ -11,88 +11,76 @@ categories:
   - Technology
 ---
 
-Most AI writing help takes one of two routes. The first runs through the clipboard: you copy a paragraph into a chat window, copy the answer back, and repair the formatting that broke on the way. The second hands over the whole file: the model returns a new version, and you are left working out what it changed.
+Ask a chatbot to fix one sentence in a document, and you often end up doing the moving yourself: copy the text into a chat, paste the answer back, and repair the formatting. Asking it to rewrite the whole file creates a different chore: checking what else changed.
 
-Both are poor at small adjustments. Fixing one sentence or one heading should not mean a round trip through a chat window or a rewritten file.
+I wanted the edit to happen where I was already writing.
 
-This week I connected a word processor on my Mac to the AI tools I already use. I select a heading, type "write a Chinese poem and put it underneath," and it appears in the document instantly. Nothing else in the file moves. see an example below:
+With [WordCraft](https://getartcraft.com/apps/wordcraft), it can. In a simple test, I asked ChatGPT to add a Chinese seven-character quatrain to the end of an open document. The four lines appeared in the editor, with no file export or copy-and-paste step.
 
-![A WordCraft window showing a short test document with a four-line Chinese poem at the end](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-a82e9b.png)
+![WordCraft document with a four-line Chinese poem added at the end](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-a82e9b.png)
 
-*The poem at the bottom was written into the open document by ChatGPT.*
+*The poem was added directly to the open document.*
 
-![A ChatGPT conversation: a request for a seven-character quatrain at the end of the document, and the reply confirming it was added](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-87cd1f.png)
+![ChatGPT conversation requesting a seven-character quatrain and confirming the edit](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-87cd1f.png)
 
-## An editor built to be driven
+## Why WordCraft works
 
-The editor is [WordCraft](https://getartcraft.com/apps/wordcraft), an [open-source](https://github.com/storytold/wordcraft) word processor written in Rust that reads and writes .docx files. Every action in it is a command with an id, and the same commands drive the ribbon, the keyboard shortcuts, a command-line tool and an [MCP](https://modelcontextprotocol.io/) server. MCP, the Model Context Protocol, is the common standard that lets AI applications call external tools.
+[WordCraft is open source](https://github.com/storytold/wordcraft) and can read and write Word (DOCX) files. Its menus, shortcuts, and external tools use the same document-editing commands. Those commands are also available through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), which lets an AI application use tools provided by another program.
 
-## How to connect your word tab to a cloud agent
+This gives a chatbot a way to inspect the open document and make a targeted edit. It no longer needs to return a replacement file for every change.
 
-A local MCP server talks to programs on the same machine. A coding agent in a terminal can start it directly. A chatbot in a browser cannot, because its tool calls come from the provider's servers, and those need a public HTTPS address.
+## Connect a local AI agent
 
-The stack has four pieces:
-
-| Piece | Tool | Job |
-|---|---|---|
-| Editor | WordCraft and `wordcraft-cli` | Exposes the open document as MCP tools |
-| Bridge | [mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) | Turns the local server into an HTTP endpoint |
-| Tunnel | [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/) | Gives that endpoint a public hostname, with no open port |
-| Gate | Cloudflare Access | Admits one account and handles the OAuth sign-in |
-
-## The steps
-
-Start the app with its [control channel](https://github.com/storytold/wordcraft/blob/main/docs/control-protocol.md), which listens on the local machine only:
+Start WordCraft with its [local control channel](https://github.com/storytold/wordcraft/blob/main/docs/control-protocol.md):
 
 ```sh
 wordcraft --control 7981
 ```
 
-A terminal agent on the same machine needs nothing more. For Claude Code:
+A terminal-based agent on the same computer can connect through `wordcraft-cli`. For example, with Claude Code:
 
 ```sh
 claude mcp add wordcraft-app -- wordcraft-cli mcp --connect 127.0.0.1:7981
 ```
 
-For browser chatbots, run the bridge. By default it also listens only on the machine itself:
+The control channel listens on the computer itself, so no public address is needed.
+
+## Connect a browser chatbot
+
+ChatGPT and other browser chatbots need a secure web address for the tool server. The connection looks like this:
+
+```text
+Browser chatbot
+      |
+Cloudflare Access (sign-in)
+      |
+Cloudflare Tunnel (secure route)
+      |
+mcp-proxy (web-to-local bridge)
+      |
+wordcraft-cli
+      |
+WordCraft (open document)
+```
+
+First, use [mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) to make the local MCP tools available over HTTP. The example below keeps the service on the local computer:
 
 ```sh
 uvx mcp-proxy --port 8765 -- wordcraft-cli mcp --connect 127.0.0.1:7981
 ```
 
-Create a tunnel in Cloudflare, route a hostname on your own domain to `http://127.0.0.1:8765`, and run the connector:
+Next, create a [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/) that routes a hostname you control to `http://127.0.0.1:8765`. The tunnel gives the chatbot an HTTPS address without opening an inbound port on your computer.
 
-```sh
-cloudflared tunnel run --token-file ~/.cloudflared/tunnel.token
-```
+Protect that hostname with a [Cloudflare Access policy](https://developers.cloudflare.com/cloudflare-one/access-controls/policies/). Allow only the intended account, then enable [Managed OAuth](https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/managed-oauth/) so the chatbot can sign in. Set the permitted redirect addresses for your client. In this test, the ChatGPT redirect pattern was `https://chatgpt.com/*`.
 
-Before the hostname goes live, put an Access application in front of it. Give it a [policy](https://developers.cloudflare.com/cloudflare-one/access-controls/policies/) that allows a single email address, and turn on [Managed OAuth](https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/managed-oauth/):
-
-```json
-{
-  "type": "self_hosted",
-  "domain": "docs.example.com",
-  "oauth_configuration": {
-    "enabled": true,
-    "dynamic_client_registration": {
-      "enabled": true,
-      "allowed_uris": [
-        "https://claude.ai/api/mcp/auth_callback",
-        "https://chatgpt.com/*"
-      ]
-    }
-  }
-}
-```
-
-Check the gate before trusting it. A request without credentials should be refused:
+Check that the endpoint rejects requests without sign-in:
 
 ```sh
 curl -i -X POST https://docs.example.com/mcp
-# HTTP/2 401
-# www-authenticate: Bearer ... resource_metadata="https://docs.example.com/.well-known/..."
 ```
 
-Then add a custom connector in the chatbot's settings: a name, the URL ending in `/mcp`, and OAuth as the authentication method. The first connection opens Cloudflare's sign-in page. 
+The response should have status `401 Unauthorized`. Replace `docs.example.com` with your own hostname.
 
-Enjoy!
+Finally, add a custom MCP connector in the chatbot, using `https://docs.example.com/mcp` and OAuth authentication. After signing in through Cloudflare, you can ask the chatbot to edit the document already open in WordCraft.
+
+A small change should be a small change. The document can stay in the editor, and so can your attention.
