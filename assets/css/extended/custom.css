@@ -151,20 +151,25 @@
   font-weight: 600;
 }
 
-/* Site-wide typography, widths, and spacing; colours remain from PaperMod. */
+/* Unified typography; PaperMod retains its original 720px content
+   and 1024px navigation widths on every page. */
 :root {
   --site-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
     "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-  --main-width: 760px;
-  --nav-width: 1200px;
   --header-height: 68px;
   --content-gap: 24px;
+}
+
+/* Match the original neutral light palette, without a warm/yellow tint.
+   Preserve PaperMod's dark-theme palette when dark mode is active. */
+:root:not([data-theme="dark"]) {
+  --theme: rgb(255, 255, 255);
+  --code-bg: rgb(245, 245, 245);
 }
 body, button, input, select, textarea { font-family: var(--site-font); }
 body { font-size: 17px; line-height: 1.7; letter-spacing: -.005em; }
 h1, h2, h3, h4, h5, h6 { letter-spacing: -.025em; line-height: 1.3; }
 .main { padding-top: 24px; padding-bottom: 48px; }
-.list .main:has(.post-entry) { max-width: calc(900px + var(--gap)*2); }
 .logo a { font-size: 23px; font-weight: 700; letter-spacing: -.035em; }
 #menu a { font-size: 15px; }
 .page-header, .post-header { margin: 10px 0 28px; }
