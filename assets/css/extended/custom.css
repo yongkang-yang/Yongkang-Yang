@@ -126,3 +126,27 @@
     margin-top: 1.65rem;
   }
 }
+
+/* Blog list: flat entries on the page background, consistent with the
+   Research and Teaching lists (no card background, border-bottom rhythm) */
+.post-entry {
+  margin-bottom: 0;
+  padding: 1.1rem 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+}
+.post-entry:active {
+  transform: none;
+}
+/* Blog list: entry titles match the 1rem title size used on Research/Teaching
+   (theme default is 24px) */
+.post-entry .entry-header h2 {
+  font-size: 1rem;
+}
+
+/* Archives: entry titles use the site's semibold title weight */
+.archive-entry-title {
+  font-weight: 600;
+}
