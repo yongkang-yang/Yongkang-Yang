@@ -1,0 +1,64 @@
+<script>
+(function () {
+  var nav = document.querySelector('.nav');
+  var menu = document.getElementById('menu');
+  if (nav && menu) {
+    var toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'mobile-menu-toggle';
+    toggle.setAttribute('aria-label', 'Toggle navigation');
+    toggle.setAttribute('aria-controls', 'menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="sr-only">Menu</span>';
+    nav.insertBefore(toggle, menu);
+    nav.classList.add('has-mobile-menu');
+    function closeMenu() {
+      nav.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    toggle.addEventListener('click', function () {
+      toggle.setAttribute('aria-expanded', String(nav.classList.toggle('menu-open')));
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 760) closeMenu();
+    });
+  }
+  var article = document.querySelector('.blog-post .post-content');
+  if (article && typeof HTMLDialogElement !== 'undefined') {
+    var images = Array.from(article.querySelectorAll('img:not(.no-lightbox)')).filter(function (img) {
+      return !img.closest('a');
+    });
+    if (images.length) {
+      var viewer = document.createElement('dialog');
+      viewer.className = 'blog-image-dialog';
+      viewer.innerHTML = '<button type="button" class="blog-image-close" aria-label="Close image">×</button><img alt="">';
+      document.body.appendChild(viewer);
+      var largeImage = viewer.querySelector('img');
+      viewer.querySelector('button').addEventListener('click', function () { viewer.close(); });
+      viewer.addEventListener('click', function (event) {
+        if (event.target === viewer) viewer.close();
+      });
+      images.forEach(function (img) {
+        function openImage() {
+          largeImage.src = img.currentSrc || img.src;
+          largeImage.alt = img.alt || '';
+          viewer.showModal();
+        }
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('role', 'button');
+        img.setAttribute('aria-label', 'Enlarge image: ' + (img.alt || 'article image'));
+        img.addEventListener('click', openImage);
+        img.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openImage();
+          }
+        });
+      });
+    }
+  }
+})();
+</script>
