@@ -26,7 +26,6 @@
       if (window.innerWidth > 760) closeMenu();
     });
   }
-{{- if and (eq .Section "posts") (eq .Kind "page") }}
   var article = document.querySelector('.blog-post .post-content');
   if (article && typeof HTMLDialogElement !== 'undefined') {
     var images = Array.from(article.querySelectorAll('img:not(.no-lightbox)')).filter(function (img) {
@@ -61,6 +60,5 @@
       });
     }
   }
-{{- end }}
 })();
 </script>
