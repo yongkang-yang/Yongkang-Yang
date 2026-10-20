@@ -24,7 +24,7 @@ I teach and supervise in organizational behavior and human resource management.
   <span class="teaching-date">2026<br>2023</span>
   <div class="teaching-details">
     <h3 class="teaching-course">Master Thesis Supervision</h3>
-    <p class="teaching-meta">Master level</p>
+    <p class="teaching-meta">Master level · Thesis supervision evaluation 4.4/5 (2026)</p>
   </div>
 </div>
 <div class="teaching-item">
