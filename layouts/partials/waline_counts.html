@@ -1,0 +1,14 @@
+{{- with site.Params.waline }}
+<script>
+  // Keep the existing per-post count protocol (zero until a response arrives).
+  document.querySelectorAll('.waline-comment-count').forEach(function (el) {
+    fetch('{{ .serverURL }}/api/comment?type=count&url=' + encodeURIComponent(el.dataset.path))
+      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        var count = [].concat(r.data)[0];
+        if (typeof count === 'number') el.textContent = count;
+      })
+      .catch(function () {});
+  });
+</script>
+{{- end }}
