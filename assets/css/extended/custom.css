@@ -140,6 +140,11 @@
 .post-entry:active {
   transform: none;
 }
+/* Blog list: entry titles match the 1rem title size used on Research/Teaching
+   (theme default is 24px) */
+.post-entry .entry-header h2 {
+  font-size: 1rem;
+}
 
 /* Archives: entry titles use the site's semibold title weight */
 .archive-entry-title {
