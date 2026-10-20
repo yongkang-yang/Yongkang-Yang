@@ -79,20 +79,20 @@
       </span>
       {{- end }}
     </h2>
-    {{- with .GetTerms "tags" }}
-    <div class="entry-tags">{{ range $i, $t := . }}{{ if $i }} {{ end }}<a href="{{ $t.Permalink }}">#{{ $t.LinkTitle }}</a>{{ end }}</div>
-    {{- end }}
   </header>
+  {{- if not (.Param "hideMeta") }}
+  <div class="entry-meta">
+    {{- partial "post_meta.html" . -}}
+    {{- if and site.Params.waline (.Param "comments") }}&nbsp;·&nbsp;<a class="entry-comments" href="{{ .Permalink }}#comments">Comments: <span class="waline-comment-count" data-path="{{ .RelPermalink }}">0</span></a>{{ end }}
+  </div>
+  {{- end }}
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </div>
   {{- end }}
-  {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
-    {{- if and site.Params.waline (.Param "comments") }}&nbsp;·&nbsp;<a class="entry-comments" href="{{ .Permalink }}#comments">Comments: <span class="waline-comment-count" data-path="{{ .RelPermalink }}">0</span></a>{{ end }}
-  </footer>
+  {{- with .GetTerms "tags" }}
+  <div class="entry-tags">{{ range $i, $t := . }}<a href="{{ $t.Permalink }}">#{{ $t.LinkTitle }}</a>{{ end }}</div>
   {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
@@ -121,17 +121,6 @@
 </footer>
 {{- end }}
 
-{{- with site.Params.waline }}
-<script>
-  // One request per post: the Waline server counts only the first path of a batched request.
-  document.querySelectorAll('.waline-comment-count').forEach(function (el) {
-    fetch('{{ .serverURL }}/api/comment?type=count&url=' + encodeURIComponent(el.dataset.path))
-      .then(function (r) { return r.json(); })
-      .then(function (r) { var n = [].concat(r.data)[0]; if (typeof n === 'number') el.textContent = n; })
-      .catch(function () {});
-  });
-</script>
-{{- end }}
 
 {{- end }}{{/* end profileMode */}}
 
