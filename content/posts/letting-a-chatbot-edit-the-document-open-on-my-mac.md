@@ -84,3 +84,11 @@ The response should have status `401 Unauthorized`. Replace `docs.example.com` w
 Finally, add a custom MCP connector in the chatbot, using `https://docs.example.com/mcp` and OAuth authentication. After signing in through Cloudflare, you can ask the chatbot to edit the document already open in WordCraft.
 
 A small change should be a small change. The document can stay in the editor, and so can your attention.
+
+## Update: Claude Docs
+
+The setup in this post already looks like a workaround. Claude now has a built-in document editor, [Claude Docs](https://claude.com/blog/cowork-is-now-claude): ask for a document in any conversation, and Claude drafts it on screen, asks clarifying questions, and leaves comments explaining its choices. You edit the text directly or ask for another pass, and the result lives at a shareable link. Claude Docs launched in beta on September 16, 2026, and on October 8 it [left beta and reached every plan, including Free](https://support.claude.com/en/articles/12138966-release-notes).
+
+![Claude's "Make something new" menu: Docs, Slides, Design, and a Dashboard in beta](https://pub-0ca7268f5327450bb58d14ef32e91b39.r2.dev/2026/10/clipboard-ae873c.png)
+
+Claude Docs is an AI-native Word: the document is born inside the chatbot instead of being connected to one afterwards through MCP. Yet it still [exports to Word and PDF](https://support.claude.com/en/articles/16923645-get-started-with-claude-docs), which is telling. The DOCX file survives because other people expect one. What is less clear is why I would open Word to write. If drafting, editing, and sharing happen where the AI already is, Word becomes a file format rather than a place to work.
